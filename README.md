@@ -23,7 +23,8 @@ cd networktracing
 ### Start Docker
 ```{bash}
 sudo service docker start
-sudo usermod -aG docker <USR_ID>
+sudo chmod 666 /var/run/docker.sock
+sudo usermod -aG docker $USER
 ```
 
 ### Build RStudio Images
